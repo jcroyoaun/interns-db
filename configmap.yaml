@@ -4,12 +4,13 @@ metadata:
   name: db-schema-init
 data:
   schema.sql: |
-    CREATE SCHEMA "grid_interns";
-
-    CREATE TABLE "grid_interns"."intern" (
+    CREATE DATABASE "grid_interns";
+    \c grid_interns
+    CREATE TABLE "intern" (
       "id_intern" int PRIMARY KEY,
       "first_name" varchar,
       "last_name" varchar
     );
-
-    INSERT INTO "grid_interns"."intern"(id_intern, first_name, last_name) VALUES ('01', 'Juan', 'Algo');
+    \c grid_interns
+    INSERT INTO  "intern"(id_intern, first_name, last_name) VALUES ('01', 'Jose', 'Navarro');
+    INSERT INTO  "intern"(id_intern, first_name, last_name) VALUES ('02', 'Edgar', 'Aceves');
