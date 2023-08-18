@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: interns-db-app
+  namespace: capstone
   labels:
     app: interns-db-app
 spec:
@@ -43,3 +44,4 @@ spec:
           subPath: schema.sql
         - name: config-pv-volume
           mountPath: "/var/lib/postgresql/data"
+

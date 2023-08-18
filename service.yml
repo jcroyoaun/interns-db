@@ -4,6 +4,7 @@ metadata:
   labels:
     app: interns-db-app
   name: interns-db-service
+  namespace: capstone
 spec:
   ports:
   - protocol: TCP
